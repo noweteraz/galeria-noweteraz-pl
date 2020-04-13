@@ -1,0 +1,89 @@
+---
+
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "pl" }}">
+
+  {%- include head.html -%}
+
+	<body class="body">
+
+    {%- include header.html -%}
+
+    <main class="main" aria-label="Content">
+
+    {%- include breadcrumb.html -%}
+
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="post-image mb-4">
+              <a class="lightbox" href="{{ page.image }}" data-plugin-options="{'type':'image'}">
+                <img src="{{ page.image }}" class="img-fluid" alt="{{ page.title }}" />
+              </a>
+            </div>
+            {% if page.images %}
+          <div class="lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+            <div class="owl-carousel owl-theme stage-margin" data-plugin-options="{'items': 6, 'margin': 10, 'loop': false, 'nav': true, 'dots': false, 'stagePadding': 40}">
+            {% for image in page.images %}
+            <div>
+            <a class="img-thumbnail img-thumbnail-no-borders d-inline-block mb-1 mr-1" href="{{ image.path }}" title="{{ page.title }}">
+            <img class="img-fluid" src="{{ image.thumbnail }}" width="110" height="110" alt="{{ page.title }}">
+            </a>
+            </div>
+            {% endfor %}
+            </div>
+          </div>
+            {% endif %}
+            <h2 class="font-weight-semibold">{{ page.title }}</h2>
+            <p class="text-color-dark">{{ page.content | remove: '<p>' | remove: '</p>' }}</p>
+          </div>
+        <div class="col-lg-4">
+          <div class="card border-0 border-radius-0 bg-color-grey">
+            <div class="card-body">
+              <h4 class="card-title mb-1 text-5 font-weight-bold">{{ page.title }}</h4>
+              <div class="divider divider-small divider-small-sm">
+							<hr>
+							</div>
+              <p class="card-text text-color-dark text-4">Wielkość naturalna: {{ page.price | times:1.2 | round: 2 | append: '0' }} zł </p>
+              <p class="card-text text-color-dark text-4">Wielkość pomniejszona: {{ page.price-1 | times:1.2 | round: 2 | append: '0' }} zł </p>
+              <div class="divider divider-small divider-small-sm">
+							<hr>
+							</div>
+              <h4 class="card-title mb-1 text-4"><i class="icon-heart icons"></i> Aukcja Charytatywna</h4>
+              <p class="card-text text-color-dark text-3">Dochód z tej aukcji zostanie przekazany na pomoc dla środowisk ludzi wykluczonych.</p>
+
+                <form name="p24" action="https://cart.przelewy24.pl/index/add" method="post" accept-charset="utf-8">
+                  <input type="hidden" name="p24_crc" value="41c75516d38a4fd1" />
+                  <input type="hidden" name="p24_id_salesman" value="97190" />
+                  <input type="hidden" name="p24_salesman_key" value="eea36f0c" />
+                  <input type="hidden" name="p24_currency" value="pln">
+                  <input type="hidden" name="p24_name" value="{{ page.title }} - format rzeczywisty" />
+                  <input type="hidden" name="p24_amount" value="{{ page.price | times:120 }}" />
+                  <input class="btn btn-outline btn-dark mb-2 przelewy-add-item" type="submit" name="" value="Kup wielkość naturalną ({{ page.price | times:1.2 | round: 2 | append: '0' }} zł)" />
+                  <input type="hidden" name="p24_add" value="1" />
+                </form>
+                <form name="p24" action="https://cart.przelewy24.pl/index/add" method="post" accept-charset="utf-8">
+                  <input type="hidden" name="p24_crc" value="41c75516d38a4fd1" />
+                  <input type="hidden" name="p24_id_salesman" value="97190" />
+                  <input type="hidden" name="p24_salesman_key" value="eea36f0c" />
+                  <input type="hidden" name="p24_currency" value="pln">
+                  <input type="hidden" name="p24_name" value="{{ page.title }} - zmniejszone" />
+                  <input type="hidden" name="p24_amount" value="{{ page.price-1 | times:120 }}" />
+                  <input class="btn btn-outline btn-dark mb-2 przelewy-add-item" type="submit" name="" value="Kup wielkość pomniejszoną ({{ page.price-1 | times:1.2 | round: 2 | append: '0' }} zł)" />
+                  <input type="hidden" name="p24_add" value="1" />
+                </form>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+    </main>
+
+    {%- include footer.html -%}
+    {%- include scripts.html -%}
+    {%- include cookie-consent.html -%}
+  </body>
+</html>

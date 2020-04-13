@@ -1,0 +1,65 @@
+<footer id="footer" class="bg-color-dark border-0 mt-0">
+  <div class="container container-lg pt-4 pb-3">
+    <div class="row py-5">
+      <div class="col-md-3 col-lg-3 mb-4 mb-lg-0">
+        <h4 class="ls-0">Adres</h4>
+        <ul class="list list-unstyled">
+          <li class="mb-1 text-light">
+            {{ site.company.name }}
+          </li>
+          <li class="mb-1 text-light">
+           {{ site.company.address_street }}
+          </li>
+          <li class="text-light">
+           {{ site.company.address_postcode }} {{ site.company.address_city }}
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-lg-3 mb-4 mb-lg-0">
+        <h4 class="ls-0">Kontakt</h4>
+        <ul class="list-unstyled">
+          <li class="pb-1 mb-2">
+            <span class="d-block line-height-2 text-light">TELEFON</span>
+            <a href="tel:{{ site.company.phone }}" class="text-color-light text-6 text-lg-4 text-xl-6 font-weight-bold">{{ site.company.phone_human }}</a>
+            <span class="d-block line-height-2 text-light">E-MAIL</span>
+            <a href="mailto:{{ site.company.email }}" class="text-color-light text-4 text-lg-4 text-xl-4 font-weight-bold">{{ site.company.email }}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-lg-3 mb-4 mb-lg-0">
+        <h4 class="ls-0">Usługi</h4>
+        <ul class="list-unstyled">
+        {% for menu in site.data.navigation-footer.services %}
+          <li class="mb-1">
+            <a class="text-light" href="{{ menu.url }}">{{ menu.text }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-3 col-lg-3 mb-4 mb-md-0">
+        <h4 class="ls-0">Galeria</h4>
+        <ul class="list-unstyled">
+          {% for menu in site.data.navigation-footer.about %}
+          <li class="mb-1">
+            <a class="text-light" href="{{ menu.url }}">{{ menu.text }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright bg-color-dark">
+    <div class="container container-lg pb-4">
+      <div class="row">
+        <div class="col">
+          <hr class="my-0 bg-color-light opacity-2">
+        </div>
+      </div>
+      <div class="row py-4 mt-2">
+        <div class="col-lg-12 text-center text-lg-right">
+          <p class="text-3 mb-0">© Copyright {{ site.time | date: '%Y' }} by {{ site.title-short }}. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

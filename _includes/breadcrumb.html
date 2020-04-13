@@ -1,0 +1,22 @@
+{% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+<section class="page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-5" style="background-image: url(/assets/images/backgrounds/page-header.jpg);">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 order-2 order-md-1 align-self-center p-static">
+        <h1><strong>{{ page.title }}</strong></h1>
+      </div>
+      <div class="col-md-6 order-1 order-md-2 align-self-center">
+        <ul class="breadcrumb breadcrumb-light d-block text-md-right text-uppercase">
+          <li><a href="/">Strona główna</a></li>
+              {% for crumb in crumbs offset: 1 %}
+              {% if forloop.last %}
+               <li>{{ page.title }}</li>
+              {% else %}
+               <li><a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a></li>
+              {% endif %}
+              {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

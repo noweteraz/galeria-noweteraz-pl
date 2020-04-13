@@ -1,0 +1,15 @@
+{
+  "name": "galeria.noweteraz.pl",
+  "version": "1.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noweteraz/galeria-noweteraz-pl.git"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-shell": "^2.1.0",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}

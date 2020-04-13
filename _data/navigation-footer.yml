@@ -1,0 +1,12 @@
+services:
+- text: Aukcje
+  url: /aukcje/
+- text: Jak kupować
+  url: /jak-kupowac/
+- text: Jak sprzedawać
+  url: /jak-sprzedawac/
+about:
+- text: Polityka prywatności
+  url: /polityka-prywatnosci/
+- text: Regulamin
+  url: /regulamin-aukcji/

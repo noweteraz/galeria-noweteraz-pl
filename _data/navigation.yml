@@ -1,0 +1,15 @@
+- text: Strona główna
+  url: /
+  order: 1
+- text: Aukcje
+  url: /aukcje/
+  order: 2
+- text: Jak kupować
+  url: /jak-kupowac/
+  order: 3
+- text: Jak sprzedawać
+  url: /jak-sprzedawac/
+  order: 4
+- text: Kontakt
+  url: /kontakt/
+  order: 5

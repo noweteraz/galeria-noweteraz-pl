@@ -1,0 +1,23 @@
+---
+
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "pl" }}">
+
+  {%- include head.html -%}
+
+	<body class="body">
+  
+    {%- include header.html -%}
+
+    <main class="main" aria-label="Content">
+      
+        {{ content }}
+
+    </main>
+
+    {%- include footer.html -%}
+    {%- include scripts.html -%}
+    {%- include cookie-consent.html -%}
+  </body>
+</html>

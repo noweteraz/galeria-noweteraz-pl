@@ -1,0 +1,13 @@
+{% assign navurl = page.url | remove: 'index.html' %}
+
+<ul class="nav nav-pills" id="mainNav"> 
+  {% for item in include.navigation %}
+
+    <li class="dropdown-primary order-{{ item.order }}">
+    <a  {% if item.url == navurl %}class="nav-link active" {% else %}class="nav-link"{% endif %} href="{{ item.url }}" itemprop="url">
+    <span itemprop="name">{{ item.text }}</span>
+    </a>
+    </li>
+
+  {% endfor %}
+</ul>

@@ -1,0 +1,71 @@
+---
+title: Kontakt
+description: "Galeria Nowe Teraz, ul. Zielna 39, 00-108 Warszawa"
+layout: page
+permalink: /kontakt/
+lang: pl_PL
+---
+
+<script type="text/javascript">var submitted=false;</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
+onload="if(submitted) {window.location='/thankyou.html';}"></iframe>
+
+<section class="custom-section-full-width bg-color-transparent border-0 mt-1 mb-1">
+    <div class="container container-lg mt-3">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="overflow-hidden mb-4">
+                    <h2 class="text-color-dark font-weight-bold text-center text-8 line-height-2 mb-0">Formularz kontaktowy</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col">
+                <form id="contactForm" class="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLScZtIjPFxaKSTNyLHYm7EoHZUcmgFWrnjevUfzwN-75PW23Xw/formResponse?embedded=true" method="POST" target="hidden_iframe" onsubmit="submitted=true;">                 
+                    <div class="form-row row-gutter-sm">
+                        <div class="form-group col-lg-6 mb-4">
+                            <label class="required font-weight-bold text-dark text-2">Imię</label>
+                            <input type="text" class="form-control border-0 custom-box-shadow-1 py-3 px-4 h-auto text-3 text-color-dark" name="entry.122701191" placeholder="Wpisz Imię" required>
+                        </div>
+                        <div class="form-group col-lg-6 mb-4">
+                            <label class="required font-weight-bold text-dark text-2">E-mail</label>
+                            <input type="email" class="form-control border-0 custom-box-shadow-1 py-3 px-4 h-auto text-3 text-color-dark" name="emailAddress" placeholder="Wpisz E-mail" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col mb-4">
+                            <label class="required font-weight-bold text-dark text-2">Wiadomość</label>
+                            <textarea rows="10" class="form-control border-0 custom-box-shadow-1 py-3 px-4 h-auto text-3 text-color-dark" name="entry.560386344" placeholder="Wpisz Twoja wiadomość" required></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                    <div class="form-group col">
+                      <div class="form-check form-check-inline pb-3 pl-4">
+                        <input type="checkbox" class="custom-control-input" data-msg-required="Musisz zaakceptować Politykę prywatności." data-msg-checkbox="Musisz zaakceptować Politykę prywatności." name="privacycontrol" id="privacycontrol" required>
+                        <label class="custom-control-label" for="privacycontrol">Przeczytałem/am i Akceptuję <a target="_blank" href="/polityka-prywatnosci/">Politykę Prywatności</a></label>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div class="form-row">
+                    <div class="form-group col">
+                    <input class="captcha-control required" type="hidden" name="reCaptchaControl" id="reCaptchaControl">
+                    <input type="hidden" name="options[reCaptcha][siteKey]" value="6LeF1egUAAAAAK2_a-7WEXfs68yjCf1sJn34XBDW">
+                    <input type="hidden" name="options[reCaptcha][secret]" value="lzzdIA6FL1+ia08Jt17GfR5FSzwMwiHy0+T+jV+HPOjZ4OxNGfpIQ+VFC4eZv7KI6O6w8L4JK1Gx+1rBk4NxT+09Cq441qgg6adbT5riN0spEEWj/HuRRhAQd4ylwesxN5U/KybY6uU1zNMOHxxv/u69gwSoowp860YYcCtTmSA=">
+                    <div class="g-recaptcha" data-sitekey="6LftX-EUAAAAADn9HknVSOSmM8pluDsOka2YBeq9" data-callback="recaptchaCallback"></div>
+                    </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col mb-0">                          
+                            <input id="form-submit" name="form-submit" type="submit" value="Wyślij" class="btn btn-secondary btn-outline text-color-dark font-weight-semibold border-width-4 custom-link-effect-1 text-1 text-xl-3 d-inline-flex align-items-center px-4 py-3">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+

@@ -1,0 +1,26 @@
+<div class="container container-lg mt-3">
+<div class="row">
+  {% for category in site.auction_categories %}
+  {% if category.status == 1 %}
+  <div class="col-lg-4 mb-5">
+    <a href="{{ category.permalink }}">
+      <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-centered-info thumb-info-no-zoom thumb-info-slide-info-hover">
+        <span class="thumb-info-wrapper">
+          <img src="{{ category.image }}" class="img-fluid" alt="{{ category.title }}">
+          <span class="thumb-info-title">
+            <span class="thumb-info-slide-info-hover-1">
+              <span class="thumb-info-inner text-5 text-uppercase"><i class="fas fa-long-arrow-alt-right"></i> {{ category.title }}</span>
+               {% if category.type %}<span class="thumb-info-type bg-color-secondary text-color-dark">{{ category.type }}</span> {% endif %}
+            </span>
+            <span class="thumb-info-slide-info-hover-2">
+            <span class="thumb-info-type"><i class="fas fa-long-arrow-alt-right"></i> Przejdź</span>
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+</div>

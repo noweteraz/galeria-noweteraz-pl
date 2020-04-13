@@ -1,0 +1,24 @@
+<section class="custom-section-full-width bg-color-transparent border-0 pb-4 mb-0 mt-1">
+    <div class="container container-lg mt-3">
+        <div class="row">
+            <div class="col-lg-12 mb-5 mb-lg-0">
+                <h2 class="text-color-dark font-weight-bold text-8 line-height-2 negative-ls-1 pb-2 mb-4">Aktualne Aukcje</h2>
+                    <div class="row row-gutter-sm overflow-visible">
+                    {% for post in site.posts %}
+                        <div class="col-sm-10 col-md-4 pb-1 mb-3 text-center">
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <a href="{{ post.url }}" class="text-decoration-none">
+                                        <img class="img-fluid pb-2 mb-4" src="{{ post.image.cover }}" alt="{{ post.title }}">
+                                    </a>
+                                    <h4 class="font-weight-bold text-color-dark custom-text-size-2 mb-3"><a href="{{ post.url }}" class="text-color-dark text-decoration-none">{{ post.title }} </a></h4>
+                                    {% if post.date_from %}<p class="text-color-dark custom-font-secondary custom-text-size-1 mb-1"><i class="icon-calendar icons"></i> {{ post.date_from | date: "%d.%m.%Y %H:%M"}}{% if post.date_to %} - {{ post.date_to | date: "%d.%m.%Y %H:%M"}}{% endif %}</p>{% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>

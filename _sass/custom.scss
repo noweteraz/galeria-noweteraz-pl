@@ -1,0 +1,42 @@
+  // cookie
+// ------
+
+@mixin max-width($media) {
+ @media only screen and (max-width: $media) { @content; }
+}
+
+$max-width--sm: 719px;
+
+    #cookie-notice {
+    padding: 20px 15px; 
+    display: none; 
+    text-align: center; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    background: #222; 
+    color: rgba(255,255,255,0.8);
+      a {
+      cursor: pointer; 
+      margin-left: 10px;
+      @include max-width($max-width--sm) {
+        position: relative; 
+        bottom: 4px;
+      }
+      }
+      span {
+      @include max-width($max-width--sm) {
+      display: block; 
+      padding-top: 3px; 
+      margin-bottom: 13px;
+      }
+    }
+    }
+    
+  .owl-carousel .owl-item img.emoji {
+    display: inline;
+    width: 20px;
+  }
+ 
+
+
