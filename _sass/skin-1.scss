@@ -351,8 +351,8 @@
 */
 .process.custom-process-style-1 .process-step-circle {
 	border-color: #e2e5e8;
-	width: 110px;
-	height: 110px;
+	/*width: 110px;
+	height: 110px;*/
 }
 .process.custom-process-style-1 .process-step-content {
 	padding-top: 32px;
@@ -477,6 +477,6 @@
 * Footer
 */
 #footer p, #footer li, #footer span, #footer a:not(.btn), #footer .footer-copyright p {
-	color: #a3b6e7;
+	color: #ffffff;
 	font-weight: 500;
 }

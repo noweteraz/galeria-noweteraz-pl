@@ -6,7 +6,7 @@ services:
 - text: Jak sprzedawać
   url: /jak-sprzedawac/
 about:
-- text: Polityka prywatności
-  url: /polityka-prywatnosci/
+- text: Aukcje
+  url: /aukcje/
 - text: Regulamin
   url: /regulamin-aukcji/

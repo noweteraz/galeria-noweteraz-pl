@@ -49,13 +49,14 @@
               <p class="card-text text-color-dark text-4">Wielkość naturalna: {{ page.price | times:1.2 | round: 2 | append: '0' }} zł </p>
               {% endif %}
               {% if page.price-1 %}
-              <p class="card-text text-color-dark text-4">Wielkość pomniejszona: {{ page.price-1 | times:1.2 | round: 2 | append: '0' }} zł </p>
+              <p class="card-text text-color-dark text-4">Wielkość pomniejszona: {{ page.price-1 | times:1.2 | round: 2 | append: '0' }} zł  </p>
+              <button type="button" class="btn btn-dark m-3" data-container="body" data-trigger="focus" data-toggle="popover" data-placement="top" data-content="Zazwyczaj jest to wielkość A4 (210x297mm)." data-original-title="" title="">Co to jest Wielkość pomniejszona?</button>
               {% endif %}
               <div class="divider divider-small divider-small-sm">
 							<hr>
 							</div>
               <h4 class="card-title mb-1 text-4"><i class="icon-heart icons"></i> Aukcja Charytatywna</h4>
-              <p class="card-text text-color-dark text-3">Dochód z tej aukcji zostanie przekazany na pomoc dla środowisk ludzi wykluczonych.</p>
+              <p class="card-text text-color-dark text-3">Dochód z tej aukcji zostanie przekazany na pomoc dla środowisk ludzi wykluczonych oraz na cele statutowe Fundacji.</p>
               {% if page.price %}
                 <form name="p24" action="https://cart.przelewy24.pl/index/add" method="post" accept-charset="utf-8">
                   <input type="hidden" name="p24_crc" value="41c75516d38a4fd1" />
